@@ -1,0 +1,21 @@
+<h3>To do Django UB Social</h3>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    {{form}}
+    <input type="submit">
+</form>
+
+{% for task in tasks %}
+    <div>
+        <a href="{% url 'update' task.id %}">Update</a>
+        <a href="{% url 'detail' task.id %}">Detail</a>
+        <a href="{% url 'delete' task.id %}">Delete</a>
+        {% if task.complete == True %}
+            <s>{{task}}</s>
+        {% else %}
+            <span>{{task}}</span>
+        {% endif %}
+    </div>
+{% endfor %}

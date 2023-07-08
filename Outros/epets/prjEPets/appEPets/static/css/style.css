@@ -1,0 +1,9 @@
+body {background-color: black; color: white;}
+#logo {margin-top: 20px; margin-bottom: 20px;}
+#cabecalho {text-align: center; margin-top: 30px; margin-bottom: 30px;}
+#pet {background-color: rgb(42, 42, 42); color: white;}
+#fotoPerfilPet {margin-top: 30px; margin-bottom: 30px;}
+#tituloPet {margin-bottom: 20px;}
+#tituloAcao {margin-top: 25px; margin-bottom: 30px;}
+#rodape {margin-top: 30px; margin-bottom: 30px;}
+#adotado {color: rgb(110, 211, 110);}

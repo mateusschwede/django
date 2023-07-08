@@ -1,0 +1,7 @@
+<a href="{% url 'list' %}">Voltar</a><br>
+{{task.id}}<br>
+{% if task.complete == True %}
+        <s>{{task.title}}</s>
+    {% else %}
+        <span>{{task.title}}</span>
+{% endif %}

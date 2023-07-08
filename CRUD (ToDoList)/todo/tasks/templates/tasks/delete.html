@@ -1,0 +1,6 @@
+<p>Excluir a task "{{item}}"?</p>
+<a href="{% url 'list' %}">Cancelar</a>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit">
+</form>

@@ -1,0 +1,10 @@
+<h1>UB Social</h1>
+
+{% if user.is_authenticated %}
+    Usuário logado
+    <a href="{% url 'logout' %}">{{request.user}} (logout)</a>
+{% else %}
+    Usuário não logado
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+{% endif %}

@@ -1,0 +1,13 @@
+<h1>Login</h1>
+{% if messages %}
+    {% for message in messages %}
+        {{message}}
+    {% endfor %}
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit">
+</form>
+<a href="{% url 'home' %}">Cancelar</a>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPets</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <img src="{% static 'images/excluirPet.gif' %}" class="img-fluid rounded" id="fotoPerfilPet" width="100px">
+            <h1>Excluir o pet</h1>
+            <p>Confirmar exclusão do pet {{pet}}?</p>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="submit" class="btn btn-lg btn-warning" value="Confirmar">
+            </form>
+            <br><a href="{% url 'list' %}" class="btn btn-danger">Cancelar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

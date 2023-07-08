@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPets</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <img src="{% static 'images/adotado.gif' %}" class="img-fluid rounded" id="fotoPerfilPet" width="120px">
+            <h1>Parabéns!</h1>
+            <p>Você adotou o pet!</p>
+            <br><a href="{% url 'list' %}" class="btn btn-success">Voltar</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
